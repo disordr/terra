@@ -6,3 +6,18 @@ resource "aws_route53_record" "cname" {
    ttl = "300"
    records = ["disordr.ddns.net."]
 }
+
+resource "aws_route53_zone" "philipmarcus" {
+   name = "philipmarcus.com"
+   comment = "philipmarcus.com"
+}
+
+resource "aws_route53_record" "cname-gapps" {
+   zone_id = "Z2K71GW2MC6KZG"
+   name = "ogfpb3vg4oai.philipmarcus.com."
+   type = "CNAME"
+   ttl = "300"
+   records = ["gv-xo3efpqdema2ve.dv.googlehosted.com."]
+}
+
+
